@@ -1,0 +1,32 @@
+<%= form_with(model: ventum, local: true) do |form| %>
+  <% if ventum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ventum.errors.count, "error") %> prohibited this ventum from being saved:</h2>
+
+      <ul>
+      <% ventum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :articulo %>
+    <%= form.text_field :articulo, id: :ventum_articulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :precio %>
+    <%= form.text_field :precio, id: :ventum_precio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cliente %>
+    <%= form.text_field :cliente, id: :ventum_cliente %>
+  </div>
+
+  <div class="button round success">
+    <%= form.button %>
+  </div>
+<% end %>

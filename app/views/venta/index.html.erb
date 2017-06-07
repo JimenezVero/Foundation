@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Venta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Articulo</th>
+      <th>Precio</th>
+      <th>Cliente</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @venta.each do |ventum| %>
+      <tr>
+        <td><%= ventum.articulo %></td>
+        <td><%= ventum.precio %></td>
+        <td><%= ventum.cliente %></td>
+        <td><%= link_to 'Show', ventum, class:'button radius' %></td>
+        <td><%= link_to 'Edit', edit_ventum_path(ventum), class:'button radius success' %></td>
+        <td><%= link_to 'Destroy', ventum, method: :delete, data: { confirm: 'Are you sure?' }, class:'button radius alert' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ventum', new_ventum_path, class:'button round success' %>

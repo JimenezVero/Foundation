@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Articulo:</strong>
+  <%= @ventum.articulo %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @ventum.precio %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @ventum.cliente %>
+</p>
+
+<%= link_to 'Edit', edit_ventum_path(@ventum), class:'button radius imfo' %> |
+<%= link_to 'Back', venta_path, class:'button round success' %>
